@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A0C1C;
+}
+
+.container {
+    display: flex;
+    max-width: 1110px;
+}
+
+.left {
+    background-color: #1B1937;
+    padding: 71px 95px 59px 72px;
+    border-radius: 8px 0 0 8px;
+    width: 50%;
+}
+
+.heading {
+    font-size: 35px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.heading span {
+    color: #AB5CDB;
+}
+
+.description {
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 72px;
+}
+
+.text-number-large {
+    font-size: 24px;
+    color: white;
+    font-weight: 700;
+}
+
+.number-type-small {
+    font-family: "Lexend Deca", sans-serif;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.analytics {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 2px;
+}
+
+.right {
+    width: 50%;
+    background-color: #AB5CDB;
+    border-radius: 0 8px 8px 0;
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+    mix-blend-mode: multiply;
+}
+
+.mobile-img {
+    display: none;
+}
+
+@media (max-width: 965px) {
+
+    body {
+        height: 956px;
+    }
+
+    .container {
+        flex-direction: column-reverse;
+        width: 90%;
+    }
+
+    .main-img {
+        display: none;
+    }
+
+    .mobile-img {
+        display: block;
+        width: 100%;
+        mix-blend-mode: multiply;
+    }
+    
+    .left, .right {
+        width: auto;
+    }
+
+    .right {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .left {
+        border-radius: 0 0 8px 8px;
+        padding: 32px;
+    }
+
+    .heading,
+    .description {
+        text-align: center;
+    }
+
+    .heading {
+        font-size: 28px;
+    }
+
+    .analytics {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        text-align: center;
+    }
+
+    .item-4 {
+        grid-row-start: 2;
+    }
+
+    .item-5 {
+        grid-row-start: 4;
+    }
+
+}
